@@ -38,3 +38,24 @@ function findMinLengthOfThreeWords(word1, word2, word3) {
   
 var output = findMinLengthOfThreeWords('a', 'be', 'see');
 console.log(output); // --> 1
+
+/* 
+findMaxLengthOfThreeWords
+Write a function called "findMaxLengthOfThreeWords".
+
+Given 3 words, "findMaxLengthOfThreeWords" returns the length of the longest word.
+ */
+
+function findMaxLengthOfThreeWords(word1, word2, word3) {
+    const wordArr = [word1, word2, word3];
+    let longestWord = word1;
+    for (let i = 1; i < wordArr.length; i++){
+      if (wordArr[i].length > longestWord.length){
+        longestWord = wordArr[i]
+      }
+    }
+    return longestWord.length;
+  }
+  
+  var output = findMaxLengthOfThreeWords('a', 'be', 'see');
+  console.log(output); // --> 3
